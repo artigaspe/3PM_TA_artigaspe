@@ -30,6 +30,7 @@ class LoginActivity : AppCompatActivity() {
         val savedPassword = sharedPreferences.getString("password", "").toString()
         val userAlreadyRegistered = sharedPreferences.getBoolean("userRegistered", false)
 
+
         if (userAlreadyRegistered){
             userField.setText(savedUser)
         }

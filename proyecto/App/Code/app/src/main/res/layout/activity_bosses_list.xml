@@ -2,8 +2,37 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layoutBossesList"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".BossesListActivity">
 
+    <TextView
+        android:id="@+id/txtBossesList"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/optimusprinceps"
+        android:text="BOSSES LIST"
+        android:textColor="@color/orange_light"
+        android:textSize="48sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <fragment
+        android:id="@+id/fragmentContainerView"
+        android:name="com.example.dsbosses.BossFragment"
+        android:layout_width="304dp"
+        android:layout_height="516dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtBossesList"
+        tools:ignore="ExtraText"
+        tools:layout="@layout/fragment_boss_list" />
 </androidx.constraintlayout.widget.ConstraintLayout>

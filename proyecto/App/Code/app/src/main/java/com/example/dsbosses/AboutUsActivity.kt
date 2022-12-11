@@ -34,18 +34,16 @@ class AboutUsActivity : AppCompatActivity() {
     fun getBosses(callback: (MutableList<BossEntity>) -> Unit ){
         val url = Constants.API_URL + Constants.DS1_PATH
         val jsonObjectRequest = JsonObjectRequest(
-            Request.Method.GET, url, null,
-            { response ->
+            Request.Method.GET, url, null, { response ->
             /*val status = response.optInt(Constants.STATUS, Constants.ERROR)
             if (status == Constants.SUCCESS) {*/
                 val jsonList = response.getJSONArray(Constants.BOSSES_PROPERTY).toString()
                 val mutableListType = object : TypeToken<MutableList<BossEntity>>(){}.type
                 val bossesList = Gson().fromJson<MutableList<BossEntity>>(jsonList, mutableListType)
-
                 callback(bossesList)
             },
             { error ->
-            error.printStackTrace()
+                error.printStackTrace()
             }
         )
 

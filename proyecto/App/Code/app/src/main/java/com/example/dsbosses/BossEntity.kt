@@ -6,13 +6,13 @@ data class BossEntity (
     var image: String,
     var description: String,
     var location: String,
-    var physicalRes: String,
-    var slashRes: String,
-    var strikeRes: String,
-    var thrustRes: String,
-    var magicRes: String,
-    var fireRes: String,
-    var lightningRes: String,
-    var healthPoints: String
+    var physicalRes: Int,
+    var slashRes: Int,
+    var strikeRes: Int,
+    var thrustRes: Int,
+    var magicRes: Int,
+    var fireRes: Int,
+    var lightningRes: Int,
+    var healthPoints: Int
         )
 {}

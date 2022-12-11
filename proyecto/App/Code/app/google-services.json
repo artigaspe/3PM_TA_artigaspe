@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "252737793534",
+    "project_id": "dsbosses-d5fe8",
+    "storage_bucket": "dsbosses-d5fe8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:252737793534:android:dc5bf2f6fe413bb5c664af",
+        "android_client_info": {
+          "package_name": "com.example.dsbosses"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "252737793534-s6936nk8ogb8s7hjgfbp0nl1enuaa77e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCw-Pocyvuyc8aX4XRPAclwySp0tChAypE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "252737793534-s6936nk8ogb8s7hjgfbp0nl1enuaa77e.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

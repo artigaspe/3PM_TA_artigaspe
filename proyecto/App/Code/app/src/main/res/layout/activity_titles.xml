@@ -7,24 +7,39 @@
     tools:context=".TitlesActivity">
 
     <TextView
+        android:id="@+id/txtChoose"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="64dp"
+        android:fontFamily="@font/optimusprinceps"
+        android:text="choose a game:"
+        android:textColor="@color/orange_light"
+        android:textSize="48sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Bye cruel World!"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <ImageButton
+        android:id="@+id/imgBtnDemons"
+        android:layout_width="230dp"
+        android:layout_height="98dp"
+        android:layout_marginTop="64dp"
+        android:contentDescription="@string/hello_blank_fragment"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.282" />
+        app:layout_constraintTop_toBottomOf="@+id/txtChoose"
+        app:srcCompat="@drawable/demons_souls_logo" />
 
+    <ImageButton
+        android:id="@+id/imgBtnDarkSouls"
+        android:layout_width="230dp"
+        android:layout_height="98dp"
+        android:layout_marginTop="64dp"
+        android:contentDescription="@string/hello_blank_fragment"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgBtnDemons"
+        app:srcCompat="@drawable/dark_souls_remastered" />
 </androidx.constraintlayout.widget.ConstraintLayout>
