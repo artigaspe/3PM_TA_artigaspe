@@ -6,11 +6,24 @@
     android:layout_height="match_parent"
     tools:context=".LoginActivity">
 
+    <ImageButton
+        android:id="@+id/imgBtnAboutUs"
+        android:layout_width="54dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/about_us_icon_orange"
+        android:contentDescription="@string/hello_blank_fragment"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/dark_header" />
+
     <TextView
-        android:id="@+id/txtTitle"
+        android:id="@+id/txtWiki"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="84dp"
+        android:fontFamily="@font/optimusprinceps"
         android:text="BOSSES WIKI"
         android:textColor="@color/orange_light"
         android:textSize="48sp"
@@ -31,7 +44,7 @@
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtTitle" />
+        app:layout_constraintTop_toBottomOf="@+id/txtWiki" />
 
     <EditText
         android:id="@+id/edtPassword"

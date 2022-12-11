@@ -7,6 +7,7 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.CheckBox
 import android.widget.EditText
+import android.widget.ImageButton
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
@@ -22,6 +23,7 @@ class LoginActivity : AppCompatActivity() {
         val passwordField: EditText = findViewById<EditText>(R.id.edtPassword)
         val loginButton: Button = findViewById<Button>(R.id.btnLogin)
         val rememberCheckBox: CheckBox = findViewById<CheckBox>(R.id.chkBoxRemember)
+        val aboutUsButton: ImageButton = findViewById<ImageButton>(R.id.imgBtnAboutUs)
 
         val sharedPreferences = getSharedPreferences("UserPrefs", Context.MODE_PRIVATE)
         val savedUser = sharedPreferences.getString("user", "").toString()
@@ -30,6 +32,10 @@ class LoginActivity : AppCompatActivity() {
 
         if (userAlreadyRegistered){
             userField.setText(savedUser)
+        }
+
+        aboutUsButton.setOnClickListener{
+            Utils.startNewActivity(this, AboutUsActivity())
         }
 
         /**
