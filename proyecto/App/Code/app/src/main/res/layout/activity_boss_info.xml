@@ -4,4 +4,311 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".BossInfoActivity"/>
+    tools:context=".BossInfoActivity">
+
+    <ImageView
+        android:id="@+id/imgAPIimage"
+        android:layout_width="376dp"
+        android:layout_height="220dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:scaleType="fitStart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/quelaag"
+        tools:srcCompat="@drawable/quelaag" />
+
+    <TextView
+        android:id="@+id/txtBackground"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="16dp"
+        android:background="#CC000000"
+        android:backgroundTint="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgAPIimage"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/txtAPIname"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:fontFamily="@font/optimusprinceps"
+        android:text="Quelaag"
+        android:textAlignment="center"
+        android:textColor="@color/orange_light"
+        android:textSize="48sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgAPIimage" />
+
+    <TextView
+        android:id="@+id/txtLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/ebgaramond_semibold"
+        android:text="Location"
+        android:textColor="@color/orange_light"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtAPIname" />
+
+    <TextView
+        android:id="@+id/txtAPIlocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Blighttown"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtLocation" />
+
+    <TextView
+        android:id="@+id/txtDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/ebgaramond_semibold"
+        android:text="Description"
+        android:textColor="@color/orange_light"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtAPIlocation" />
+
+    <TextView
+        android:id="@+id/txtAPIdescription"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="24dp"
+        android:text="A half-woman, half-spider demon located in a lair near the bottom of Blighttown. One of the Witch of Izalith's daughters, transformed into a monster by the Flames of Chaos."
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtDescription" />
+
+    <TextView
+        android:id="@+id/txtStats"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/ebgaramond_semibold"
+        android:text="STATS"
+        android:textColor="@color/orange_light"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtAPIdescription" />
+
+    <TextView
+        android:id="@+id/txtHP"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:text="HP:"
+        android:textAlignment="textEnd"
+        android:textColor="@color/orange_light"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtStats" />
+
+    <TextView
+        android:id="@+id/txtAPIhealthPoints"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:text="3139"
+        android:textAlignment="textStart"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toEndOf="@+id/txtHP"
+        app:layout_constraintTop_toBottomOf="@+id/txtStats" />
+
+    <TextView
+        android:id="@+id/txtMagicRes"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:text="MagicRes:"
+        android:textAlignment="textEnd"
+        android:textColor="@color/orange_light"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtHP" />
+
+    <TextView
+        android:id="@+id/txtAPImagicRes"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="419"
+        android:textAlignment="textStart"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toEndOf="@+id/txtMagicRes"
+        app:layout_constraintTop_toBottomOf="@+id/txtAPIhealthPoints" />
+
+    <TextView
+        android:id="@+id/txtFireRes"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:text="FireRes:"
+        android:textAlignment="textEnd"
+        android:textColor="@color/orange_light"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtMagicRes" />
+
+    <TextView
+        android:id="@+id/txtAPIfireRes"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="9999"
+        android:textAlignment="textStart"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toEndOf="@+id/txtFireRes"
+        app:layout_constraintTop_toBottomOf="@+id/txtAPImagicRes" />
+
+    <TextView
+        android:id="@+id/txtLightningRes"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:text="LightningRes:"
+        android:textAlignment="textEnd"
+        android:textColor="@color/orange_light"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtFireRes" />
+
+    <TextView
+        android:id="@+id/txtAPIlightningRes"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="374"
+        android:textAlignment="textStart"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toEndOf="@+id/txtLightningRes"
+        app:layout_constraintTop_toBottomOf="@+id/txtAPIfireRes" />
+
+    <TextView
+        android:id="@+id/txtPhysicalRes"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:text="PhysicalRes:"
+        android:textAlignment="textEnd"
+        android:textColor="@color/orange_light"
+        app:layout_constraintEnd_toStartOf="@+id/txtAPIphysicalRes"
+        app:layout_constraintTop_toBottomOf="@+id/txtStats" />
+
+    <TextView
+        android:id="@+id/txtAPIphysicalRes"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="24dp"
+        android:text="467"
+        android:textAlignment="textStart"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtStats" />
+
+    <TextView
+        android:id="@+id/txtSlashRes"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="SlashRes:"
+        android:textAlignment="textEnd"
+        android:textColor="@color/orange_light"
+        app:layout_constraintEnd_toStartOf="@+id/txtAPIslashRes"
+        app:layout_constraintTop_toBottomOf="@+id/txtPhysicalRes" />
+
+    <TextView
+        android:id="@+id/txtAPIslashRes"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="24dp"
+        android:text="467"
+        android:textAlignment="textStart"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtAPIphysicalRes" />
+
+    <TextView
+        android:id="@+id/txtStrikeRes"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="StrikeRes:"
+        android:textAlignment="textEnd"
+        android:textColor="@color/orange_light"
+        app:layout_constraintEnd_toStartOf="@+id/txtAPIstrikeRes"
+        app:layout_constraintTop_toBottomOf="@+id/txtSlashRes" />
+
+    <TextView
+        android:id="@+id/txtAPIstrikeRes"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="24dp"
+        android:text="467"
+        android:textAlignment="textStart"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtAPIslashRes" />
+
+    <TextView
+        android:id="@+id/txtThrustRes"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="ThrustRes:"
+        android:textAlignment="textEnd"
+        android:textColor="@color/orange_light"
+        app:layout_constraintEnd_toStartOf="@+id/txtAPIthrustRes"
+        app:layout_constraintTop_toBottomOf="@+id/txtStrikeRes" />
+
+    <TextView
+        android:id="@+id/txtAPIthrustRes"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="24dp"
+        android:text="467"
+        android:textAlignment="textStart"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtAPIstrikeRes" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -13,6 +13,9 @@ class TitlesActivity : AppCompatActivity() {
         val darksoulsButton: ImageButton = findViewById<ImageButton>(R.id.imgBtnDarkSouls)
 
         darksoulsButton.setOnClickListener{
+            Utils.startNewActivity(this, BossInfoActivity())
+        }
+        demonsButton.setOnClickListener{
             Utils.startNewActivity(this, BossesListActivity())
         }
     }
