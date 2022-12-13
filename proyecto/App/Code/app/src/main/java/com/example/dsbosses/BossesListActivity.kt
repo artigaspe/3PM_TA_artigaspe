@@ -1,5 +1,6 @@
 package com.example.dsbosses
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.google.android.material.snackbar.Snackbar
@@ -15,5 +16,8 @@ class BossesListActivity : AppCompatActivity(), OnListFragmentInteractionListene
     override fun onListFragmentInteraction(item: String?) {
         Snackbar.make(layoutBossesList, item ?: "", Snackbar.LENGTH_LONG)
             .setAction("Action", null).show()
+        val intent = Intent(this, BossInfoActivity::class.java)
+        intent.putExtra("bossSelected", item)
+        startActivity(intent)
     }
 }

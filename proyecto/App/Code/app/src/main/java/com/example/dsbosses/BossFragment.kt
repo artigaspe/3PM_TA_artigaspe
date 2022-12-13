@@ -1,5 +1,6 @@
 package com.example.dsbosses
 
+import android.app.Activity
 import android.content.Context
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -20,6 +21,8 @@ class BossFragment : Fragment() {
     private var columnCount = 1
 
     private var listener: OnListFragmentInteractionListener? = null
+
+    val bosses: MutableList<String> = arrayListOf()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -73,4 +76,6 @@ class BossFragment : Fragment() {
         fun onListFragmentInteraction(item: String?)
     }
 
+    //val myActivity: Activity? = activity
+    //fun GetBosses
 }

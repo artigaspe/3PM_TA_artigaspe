@@ -47,7 +47,7 @@ class AboutUsActivity : AppCompatActivity() {
             }
         )
 
-        var requestQueue = Volley.newRequestQueue(this)
+        var requestQueue = Volley.newRequestQueue(this) //(myActivity as Context)
         requestQueue.add(jsonObjectRequest)
     }
 
