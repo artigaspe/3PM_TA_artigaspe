@@ -12,11 +12,12 @@ class TitlesActivity : AppCompatActivity() {
         val demonsButton: ImageButton = findViewById<ImageButton>(R.id.imgBtnDemons)
         val darksoulsButton: ImageButton = findViewById<ImageButton>(R.id.imgBtnDarkSouls)
 
-        darksoulsButton.setOnClickListener{
-            Utils.startNewActivity(this, BossInfoActivity())
-        }
         demonsButton.setOnClickListener{
             Utils.startNewActivity(this, BossesListActivity())
+        }
+
+        darksoulsButton.setOnClickListener{
+            Utils.startNewActivity(this, BossInfoActivity())
         }
     }
 }
