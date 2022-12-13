@@ -1,15 +1,11 @@
 package com.example.dsbosses
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
-import android.widget.TextView
-import android.widget.Toast
-import com.android.volley.Request
-import com.android.volley.toolbox.JsonObjectRequest
-import com.android.volley.toolbox.Volley
-import com.google.gson.Gson
-import com.google.gson.reflect.TypeToken
+import android.widget.EditText
+import androidx.appcompat.app.AlertDialog
 
 class AboutUsActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -17,56 +13,44 @@ class AboutUsActivity : AppCompatActivity() {
         setContentView(R.layout.activity_about_us)
 
         val backButton: Button = findViewById<Button>(R.id.btnBack)
+        val sendButton: Button = findViewById<Button>(R.id.btnSend)
+
+        val emailText: EditText = findViewById<EditText>(R.id.edtUserEmail)
+        val messageText: EditText = findViewById<EditText>(R.id.edtMessage)
+
         backButton.setOnClickListener{
-            Utils.startNewActivity(this, LoginActivity())
+            val auxIntent = Intent(this, LoginActivity::class.java)
+            this.startActivity(auxIntent)
         }
 
-        val test: TextView = findViewById<TextView>(R.id.txtCompany)
-        /*this.getAboutUs { aboutusList ->
-            test.text = aboutusList.first().toString()
-        }*/
-        this.getBosses { bossesList ->
-            test.text = bossesList.first().name
-        }
-
-    }
-
-    fun getBosses(callback: (MutableList<BossEntity>) -> Unit ){
-        val url = Constants.API_URL + Constants.DS1_PATH
-        val jsonObjectRequest = JsonObjectRequest(
-            Request.Method.GET, url, null, { response ->
-            /*val status = response.optInt(Constants.STATUS, Constants.ERROR)
-            if (status == Constants.SUCCESS) {*/
-                val jsonList = response.getJSONArray(Constants.BOSSES_PROPERTY).toString()
-                val mutableListType = object : TypeToken<MutableList<BossEntity>>(){}.type
-                val bossesList = Gson().fromJson<MutableList<BossEntity>>(jsonList, mutableListType)
-                callback(bossesList)
-            },
-            { error ->
-                error.printStackTrace()
+        sendButton.setOnClickListener{
+            if (emailText.text.isEmpty() || messageText.text.isEmpty()) {
+                alertEmptyFields()
+            } else{
+                alertSendMessage()
+                emailText.text.clear()
+                messageText.text.clear()
             }
-        )
-
-        var requestQueue = Volley.newRequestQueue(this) //(myActivity as Context)
-        requestQueue.add(jsonObjectRequest)
+        }
     }
 
-    fun getAboutUs(callback: (MutableList<String>) -> Unit ){
-        val url = Constants.API_URL + Constants.ABOUTUS_PATH
-        val jsonObjectRequest = JsonObjectRequest(Request.Method.GET, url, null, { response ->
-            /*val status = response.optInt(Constants.STATUS, Constants.ERROR)
-            if (status == Constants.SUCCESS) {*/
-                val jsonList = response.getJSONObject("aboutus").toString()
-                val mutableListType = object : TypeToken<MutableList<String>>(){}.type
-                val aboutusList = Gson().fromJson<MutableList<String>>(jsonList, mutableListType)
+    private fun alertEmptyFields() {
+        val alert = AlertDialog.Builder(this)
+        alert.setTitle("WATCH OUT!")
+        alert.setMessage("Please fill the fields with your email and message")
+        alert.setPositiveButton(
+            "Ok"
+        ) { dialog, which -> }
+        alert.show()
+    }
 
-                callback(aboutusList)
-
-        },{ error ->
-            error.printStackTrace()
-        })
-
-        var requestQueue = Volley.newRequestQueue(this)
-        requestQueue.add(jsonObjectRequest)
+    private fun alertSendMessage() {
+        val alert = AlertDialog.Builder(this)
+        alert.setTitle("MESSAGE SENT")
+        alert.setMessage("Your proposals will be atented as soon as possible")
+        alert.setPositiveButton(
+            "Ok"
+        ) { dialog, which -> }
+        alert.show()
     }
 }

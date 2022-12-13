@@ -10,47 +10,48 @@
         android:id="@+id/imgBtnAboutUs"
         android:layout_width="54dp"
         android:layout_height="54dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
         android:background="#00000000"
         android:contentDescription="@string/hello_blank_fragment"
         android:scaleType="fitCenter"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@android:drawable/dark_header"
+        app:srcCompat="@drawable/about_us_icon_orange"
         tools:srcCompat="@drawable/about_us_icon_orange" />
 
     <TextView
         android:id="@+id/txtWiki"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="84dp"
+        android:layout_marginTop="90dp"
         android:fontFamily="@font/optimusprinceps"
         android:text="BOSSES WIKI"
-        android:textColor="@color/orange_light"
-        android:textSize="48sp"
+        android:textColor="@color/dark_tangerine"
+        android:textSize="52sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/edtUser"
-        android:layout_width="256dp"
+        android:layout_width="280dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="128dp"
         android:backgroundTint="@color/white"
         android:ems="10"
         android:hint="insert user"
         android:inputType="textPersonName"
         android:minHeight="48dp"
         android:textColor="@color/white"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtWiki" />
 
     <EditText
         android:id="@+id/edtPassword"
-        android:layout_width="256dp"
+        android:layout_width="280dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:backgroundTint="@color/white"
@@ -59,21 +60,27 @@
         android:inputType="textPassword"
         android:minHeight="48dp"
         android:textColor="@color/white"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edtUser" />
 
     <Button
         android:id="@+id/btnLogin"
-        android:layout_width="wrap_content"
+        android:layout_width="110dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="128dp"
+        android:fontFamily="@font/ebgaramond_bold"
         android:text="Login"
         android:textColor="@color/black"
+        android:textSize="18sp"
+        app:cornerRadius="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:strokeColor="@color/blizzard_blue"
+        app:strokeWidth="2dp" />
 
     <CheckBox
         android:id="@+id/chkBoxRemember"
@@ -83,8 +90,9 @@
         android:checked="false"
         android:text="Remember me"
         android:textColor="@color/white"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.242"
+        app:layout_constraintHorizontal_bias="0.224"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edtPassword" />
 

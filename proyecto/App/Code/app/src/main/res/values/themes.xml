@@ -14,13 +14,17 @@
         <!-- Customize your theme here. -->
     </style>
 
-    <style name="Theme.DSbosses_Orange" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+    <style name="Theme.DSbosses_Orange" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/orange_light</item>
-        <item name="colorPrimaryVariant">@color/orange_medium</item>
+        <item name="colorPrimary">@color/dark_tangerine</item>
+        <item name="colorPrimaryVariant">@color/tangerine</item>
         <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/blizzard_blue</item>
+        <item name="colorSecondaryVariant">@color/boston_blue</item>
+        <item name="colorOnSecondary">@color/black</item>
         <!-- Status bar color. -->
-        <item name="android:statusBarColor">@color/orange_medium</item>
+        <item name="android:statusBarColor">@color/tangerine</item>
         <!-- Additional customization. -->
         <item name="android:colorBackground">@color/black</item>
         <item name="android:textColor">@color/white</item>

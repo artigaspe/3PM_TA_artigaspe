@@ -6,6 +6,21 @@
     android:layout_height="match_parent"
     tools:context=".BossInfoActivity">
 
+    <Button
+        android:id="@+id/btnBackToBossesList"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:background="?attr/actionModeCloseDrawable"
+        android:fontFamily="@font/ebgaramond_bold"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:strokeColor="@color/blizzard_blue"
+        tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
+
     <ImageView
         android:id="@+id/imgAPIimage"
         android:layout_width="376dp"
@@ -47,7 +62,7 @@
         android:fontFamily="@font/optimusprinceps"
         android:text="Quelaag"
         android:textAlignment="center"
-        android:textColor="@color/orange_light"
+        android:textColor="@color/dark_tangerine"
         android:textSize="48sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -60,8 +75,8 @@
         android:layout_marginTop="8dp"
         android:fontFamily="@font/ebgaramond_semibold"
         android:text="Location"
-        android:textColor="@color/orange_light"
-        android:textSize="20sp"
+        android:textColor="@color/dark_tangerine"
+        android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtAPIname" />
@@ -72,7 +87,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:text="Blighttown"
-        android:textSize="14sp"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtLocation" />
@@ -84,8 +99,8 @@
         android:layout_marginTop="8dp"
         android:fontFamily="@font/ebgaramond_semibold"
         android:text="Description"
-        android:textColor="@color/orange_light"
-        android:textSize="20sp"
+        android:textColor="@color/dark_tangerine"
+        android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
@@ -99,7 +114,8 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="24dp"
         android:text="A half-woman, half-spider demon located in a lair near the bottom of Blighttown. One of the Witch of Izalith's daughters, transformed into a monster by the Flames of Chaos."
-        android:textSize="14sp"
+        android:textAlignment="center"
+        android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
@@ -110,10 +126,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
+        android:layout_marginBottom="150dp"
         android:fontFamily="@font/ebgaramond_semibold"
         android:text="STATS"
-        android:textColor="@color/orange_light"
-        android:textSize="20sp"
+        android:textColor="@color/dark_tangerine"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
@@ -127,7 +145,8 @@
         android:layout_marginTop="16dp"
         android:text="HP:"
         android:textAlignment="textEnd"
-        android:textColor="@color/orange_light"
+        android:textColor="@color/dark_tangerine"
+        android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtStats" />
 
@@ -140,6 +159,7 @@
         android:text="3139"
         android:textAlignment="textStart"
         android:textColor="@color/white"
+        android:textSize="16sp"
         app:layout_constraintStart_toEndOf="@+id/txtHP"
         app:layout_constraintTop_toBottomOf="@+id/txtStats" />
 
@@ -151,7 +171,8 @@
         android:layout_marginTop="8dp"
         android:text="MagicRes:"
         android:textAlignment="textEnd"
-        android:textColor="@color/orange_light"
+        android:textColor="@color/dark_tangerine"
+        android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtHP" />
 
@@ -164,6 +185,7 @@
         android:text="419"
         android:textAlignment="textStart"
         android:textColor="@color/white"
+        android:textSize="16sp"
         app:layout_constraintStart_toEndOf="@+id/txtMagicRes"
         app:layout_constraintTop_toBottomOf="@+id/txtAPIhealthPoints" />
 
@@ -175,7 +197,8 @@
         android:layout_marginTop="8dp"
         android:text="FireRes:"
         android:textAlignment="textEnd"
-        android:textColor="@color/orange_light"
+        android:textColor="@color/dark_tangerine"
+        android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtMagicRes" />
 
@@ -188,6 +211,7 @@
         android:text="9999"
         android:textAlignment="textStart"
         android:textColor="@color/white"
+        android:textSize="16sp"
         app:layout_constraintStart_toEndOf="@+id/txtFireRes"
         app:layout_constraintTop_toBottomOf="@+id/txtAPImagicRes" />
 
@@ -199,7 +223,8 @@
         android:layout_marginTop="8dp"
         android:text="LightningRes:"
         android:textAlignment="textEnd"
-        android:textColor="@color/orange_light"
+        android:textColor="@color/dark_tangerine"
+        android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtFireRes" />
 
@@ -213,7 +238,8 @@
         android:textAlignment="textStart"
         android:textColor="@color/white"
         app:layout_constraintStart_toEndOf="@+id/txtLightningRes"
-        app:layout_constraintTop_toBottomOf="@+id/txtAPIfireRes" />
+        app:layout_constraintTop_toBottomOf="@+id/txtAPIfireRes"
+        android:textSize="16sp" />
 
     <TextView
         android:id="@+id/txtPhysicalRes"
@@ -223,7 +249,8 @@
         android:layout_marginEnd="8dp"
         android:text="PhysicalRes:"
         android:textAlignment="textEnd"
-        android:textColor="@color/orange_light"
+        android:textColor="@color/dark_tangerine"
+        android:textSize="16sp"
         app:layout_constraintEnd_toStartOf="@+id/txtAPIphysicalRes"
         app:layout_constraintTop_toBottomOf="@+id/txtStats" />
 
@@ -236,6 +263,7 @@
         android:text="467"
         android:textAlignment="textStart"
         android:textColor="@color/white"
+        android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtStats" />
 
@@ -247,7 +275,8 @@
         android:layout_marginEnd="8dp"
         android:text="SlashRes:"
         android:textAlignment="textEnd"
-        android:textColor="@color/orange_light"
+        android:textColor="@color/dark_tangerine"
+        android:textSize="16sp"
         app:layout_constraintEnd_toStartOf="@+id/txtAPIslashRes"
         app:layout_constraintTop_toBottomOf="@+id/txtPhysicalRes" />
 
@@ -260,6 +289,7 @@
         android:text="467"
         android:textAlignment="textStart"
         android:textColor="@color/white"
+        android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtAPIphysicalRes" />
 
@@ -271,7 +301,8 @@
         android:layout_marginEnd="8dp"
         android:text="StrikeRes:"
         android:textAlignment="textEnd"
-        android:textColor="@color/orange_light"
+        android:textColor="@color/dark_tangerine"
+        android:textSize="16sp"
         app:layout_constraintEnd_toStartOf="@+id/txtAPIstrikeRes"
         app:layout_constraintTop_toBottomOf="@+id/txtSlashRes" />
 
@@ -284,6 +315,7 @@
         android:text="467"
         android:textAlignment="textStart"
         android:textColor="@color/white"
+        android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtAPIslashRes" />
 
@@ -295,7 +327,8 @@
         android:layout_marginEnd="8dp"
         android:text="ThrustRes:"
         android:textAlignment="textEnd"
-        android:textColor="@color/orange_light"
+        android:textColor="@color/dark_tangerine"
+        android:textSize="16sp"
         app:layout_constraintEnd_toStartOf="@+id/txtAPIthrustRes"
         app:layout_constraintTop_toBottomOf="@+id/txtStrikeRes" />
 
@@ -308,6 +341,7 @@
         android:text="467"
         android:textAlignment="textStart"
         android:textColor="@color/white"
+        android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtAPIstrikeRes" />
 

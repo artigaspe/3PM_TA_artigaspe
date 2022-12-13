@@ -1,0 +1,84 @@
+{
+  "bosses":
+  [  
+    {
+      "id": 0,
+      "name": "Flamelurker",
+      "image": "https://demonssouls.wiki.fextralife.com/file/Demons-Souls/flamelurker-boss-guide-demons-souls-wiki.png",
+      "location": "The Tunnel City",
+      "description": "Since ancient times, a fire demon has been sealed in an underground temple filled with dragon bones.",
+      "healthPoints": 3720,
+      "magicRes": 23,
+      "fireRes": 857,
+      "lightningRes": 111,
+      "physicalRes": 160,
+      "slashRes": 200,
+      "strikeRes": 160,
+      "thrustRes": 200
+    },
+    
+    {
+      "id": 1,
+      "name": "Fool's Idol",
+      "image": "https://demonssouls.wiki.fextralife.com/file/Demons-Souls/fools-idol-boss-guide-demons-souls-wiki.png",
+      "location": "Tower of Latria",
+      "description": "The Fool's Idol will create duplicates of itself in order to confuse the player. However, the fake ones will die in one hit.",
+      "healthPoints": 1864,
+      "magicRes": 121,
+      "fireRes": 82,
+      "lightningRes": 111,
+      "physicalRes": 97,
+      "slashRes": 97,
+      "strikeRes": 97,
+      "thrustRes": 97
+    },
+    
+    {
+      "id": 2,
+      "name": "Maiden Astraea",
+      "image": "https://demonssouls.wiki.fextralife.com/file/Demons-Souls/maiden-astraea-boss-guide-demons-souls-wiki.png",
+      "location": "Dirty Colossus Archstone",
+      "description": "She is a pure soul who has gone into the Valley of Defilement to help the wretched and the suffering who dwell there. Neither she, nor her bodyguard Garl Vinland have been seen since they entered the fog.",
+      "healthPoints": 3055,        
+      "magicRes": 99,
+      "fireRes": 88,
+      "lightningRes": 111,
+      "physicalRes": 116,
+      "slashRes": 116,
+      "strikeRes": 116,
+      "thrustRes": 116
+    },
+    
+    {
+      "id": 3,
+      "name": "Tower Knight",
+      "image": "https://demonssouls.wiki.fextralife.com/file/Demons-Souls/tower-knight-boss-guide-demons-souls-wiki.png",
+      "location": "The Lord's Pass",
+      "description": "A large knight covered in thick metal armor, wielding a lance and a shield.",
+      "healthPoints": 1365, 
+      "magicRes": 62,
+      "fireRes": 109,
+      "lightningRes": 111,
+      "physicalRes": 166,
+      "slashRes": 166,
+      "strikeRes": 166,
+      "thrustRes": 166
+    },
+    
+    {
+      "id": 4,
+      "name": "Vanguard",
+      "image": "https://demonssouls.wiki.fextralife.com/file/Demons-Souls/vanguard-boss-guide-demons-souls-wiki.png",
+      "location": "Shrine of Storms",
+      "description": "A huge demon with grey skin covered with spikes. It has three yellow glowing eyes and a little hole that works as a nose.",
+      "healthPoints": 2970, 
+      "magicRes": 80,
+      "fireRes": 98,
+      "lightningRes": 111,
+      "physicalRes": 107,
+      "slashRes": 107,
+      "strikeRes": 161,
+      "thrustRes": 161
+    }
+  ]
+}

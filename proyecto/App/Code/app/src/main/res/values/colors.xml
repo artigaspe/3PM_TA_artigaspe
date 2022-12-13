@@ -9,8 +9,11 @@
     <color name="white">#FFFFFFFF</color>
 
     <!-- Customized colors -->
-    <color name="orange_light">#FF9900</color>
-    <color name="orange_medium">#FF7700</color>
+    <color name="dark_tangerine">#F7AD19</color>
+    <color name="tangerine">#F27F0C</color>
     <color name="orange_dark">#E14E00</color>
     <color name="orange_weak">#CCB07C</color>
+    <color name="blizzard_blue">#9FE7F5</color>
+    <color name="boston_blue">#429EBD</color>
+    <color name="prussian_blue">#053F5C</color>
 </resources>

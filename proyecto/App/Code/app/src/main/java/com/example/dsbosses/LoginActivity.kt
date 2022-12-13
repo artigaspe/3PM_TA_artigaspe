@@ -8,7 +8,6 @@ import android.widget.Button
 import android.widget.CheckBox
 import android.widget.EditText
 import android.widget.ImageButton
-import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 
@@ -36,7 +35,8 @@ class LoginActivity : AppCompatActivity() {
         }
 
         aboutUsButton.setOnClickListener{
-            Utils.startNewActivity(this, AboutUsActivity())
+            val auxIntent = Intent(this, AboutUsActivity::class.java)
+            this.startActivity(auxIntent)
         }
 
         /**
@@ -51,15 +51,16 @@ class LoginActivity : AppCompatActivity() {
                 val passwordString = passwordField.text.toString()
                 if(rememberCheckBox.isChecked) {
                     registerUser(sharedPreferences, userString, passwordString)
-                    Utils.startNewActivity(this, TitlesActivity())
+                    val auxIntent = Intent(this, TitlesActivity::class.java)
+                    this.startActivity(auxIntent)
                 }else{
                     if(checkIfUserExists(userString, passwordString, savedUser, savedPassword)) {
-                        Utils.startNewActivity(this, TitlesActivity())
+                        val auxIntent = Intent(this, TitlesActivity::class.java)
+                        this.startActivity(auxIntent)
                     }else{
                         alertWrongCredentials()
                     }
                 }
-
             }
         }
     }

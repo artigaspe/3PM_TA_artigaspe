@@ -1,18 +1,21 @@
 package com.example.dsbosses
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
 import android.widget.TextView
-import com.android.volley.Request
-import com.android.volley.toolbox.JsonObjectRequest
-import com.android.volley.toolbox.Volley
-import com.google.gson.Gson
-import com.google.gson.reflect.TypeToken
 
 class BossInfoActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_boss_info)
+
+        val backButton: Button = findViewById<Button>(R.id.btnBackToBossesList)
+        backButton.setOnClickListener{
+            val auxIntent = Intent(this, BossesListActivity::class.java)
+            this.startActivity(auxIntent)
+        }
 
         val extras = intent.extras
         val bossImageURL: String? = extras?.getString("bossImageURL")

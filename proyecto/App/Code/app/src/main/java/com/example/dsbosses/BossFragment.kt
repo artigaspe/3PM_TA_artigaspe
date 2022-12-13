@@ -13,19 +13,13 @@ import android.view.ViewGroup
 import com.android.volley.Request
 import com.android.volley.toolbox.JsonObjectRequest
 import com.android.volley.toolbox.Volley
-import com.example.dsbosses.placeholder.PlaceholderContent
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 
-/**
- * A fragment representing a list of Items.
- */
 class BossFragment : Fragment() {
 
-    // TODO: Customize parameters
     private var columnCount = 1
     private var listener: OnListFragmentInteractionListener? = null
-
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -40,12 +34,8 @@ class BossFragment : Fragment() {
                     columnCount <= 1 -> LinearLayoutManager(context)
                     else -> GridLayoutManager(context, columnCount)
                 }
-
                 val bossesNames: MutableList<String> = arrayListOf()
                 getBosses{ bossesList ->
-                    /*for(item in bossesList) {
-                        bossesNames.add(item.name)
-                    }*/
                     adapter = MyBossRecyclerViewAdapter(bossesList, listener)
                 }
             }
@@ -67,24 +57,16 @@ class BossFragment : Fragment() {
         listener = null
     }
 
-    /**
-     * This interface must be implemented by activities that contain this
-     * fragment to allow an interaction in this fragment to be communicated
-     * to the activity and potentially other fragments contained in that
-     * activity.
-     *
-     *
-     * See the Android Training lesson
-     * [Communicating with Other Fragments](http://developer.android.com/training/basics/fragments/communicating.html)
-     * for more information.
-     */
     interface OnListFragmentInteractionListener {
-        // TODO: Update argument type and name
         fun onListFragmentInteraction(item: BossEntity?)
     }
 
     fun getBosses(callback: (MutableList<BossEntity>) -> Unit ){
-        val url = Constants.API_URL + Constants.DS1_PATH
+        val myActivity: Activity? = activity
+        val extra = myActivity?.intent?.extras
+        val endPoint: String? = extra?.getString("endpoint")
+        //val url = Constants.API_URL + Constants.DS1_PATH
+        val url = Constants.API_URL + endPoint
         val jsonObjectRequest = JsonObjectRequest(
             Request.Method.GET, url, null, { response ->
                 /*val status = response.optInt(Constants.STATUS, Constants.ERROR)
@@ -98,7 +80,7 @@ class BossFragment : Fragment() {
                 error.printStackTrace()
             }
         )
-        val myActivity: Activity? = activity
+
         var requestQueue = Volley.newRequestQueue(myActivity as Context)
         requestQueue.add(jsonObjectRequest)
     }

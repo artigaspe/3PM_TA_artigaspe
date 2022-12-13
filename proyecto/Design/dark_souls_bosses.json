@@ -1,0 +1,84 @@
+{
+  "bosses":
+  [  
+    {
+      "id": 0,
+      "name": "Asylum Demon",
+      "image": "https://darksouls.wiki.fextralife.com/file/Dark-Souls/Boss_0036_Asylum%20Demon.jpg",
+      "location": "Undead Asylum",
+      "description": "A lesser demon who guards the Undead Asylum, preventing the prisoners within from escaping.",
+      "healthPoints": 825,
+      "magicRes": 224,
+      "fireRes": 238,
+      "lightningRes": 195,
+      "physicalRes": 300,
+      "slashRes": 300,
+      "strikeRes": 300,
+      "thrustRes": 300
+    },
+    
+    {
+      "id": 1,
+      "name": "Bell Gargoyle",
+      "image": "https://darksouls.wiki.fextralife.com/file/Dark-Souls/Boss_0035_Bell%20Gargoyle.jpg",
+      "location": "Undead Parish",
+      "description": "Guarding the path to one of the Bells of Awakening. Not just one, but two of these halberd-wielding, fire breathing demons must be killed for the player to proceed.",
+      "healthPoints": 1000,
+      "magicRes": 321,
+      "fireRes": 305,
+      "lightningRes": 325,
+      "physicalRes": 416,
+      "slashRes": 416,
+      "strikeRes": 416,
+      "thrustRes": 416
+    },
+    
+    {
+      "id": 2,
+      "name": "Capra Demon",
+      "image": "https://darksouls.wiki.fextralife.com/file/Dark-Souls/Boss_0034_Capra%20Demon.jpg",
+      "location": "Undead Burg",
+      "description": "Capra Demons were demons that were most likely created when the Witch of Izalith attempted to duplicate the First Flame using a Lord Soul.",
+      "healthPoints": 1176,        
+      "magicRes": 373,
+      "fireRes": 396,
+      "lightningRes": 321,
+      "physicalRes": 495,
+      "slashRes": 495,
+      "strikeRes": 495,
+      "thrustRes": 495
+    },
+    
+    {
+      "id": 3,
+      "name": "Ceaseless Discharge",
+      "image": "https://darksouls.wiki.fextralife.com/file/Dark-Souls/Ceaseless_Discharge_Extra.jpg",
+      "location": "Demon Ruins",
+      "description": "Ceaseless Discharge was born as the youngest child and only son of the Witch of Izalith. However, his existence was not without hardship as he was born with sores inflamed by lava.",
+      "healthPoints": 4200, 
+      "magicRes": 281,
+      "fireRes": 9999,
+      "lightningRes": 321,
+      "physicalRes": 401,
+      "slashRes": 401,
+      "strikeRes": 401,
+      "thrustRes": 401
+    },
+    
+    {
+      "id": 4,
+      "name": "Centipede Demon",
+      "image": "https://darksouls.wiki.fextralife.com/file/Dark-Souls/Boss_0032_Centipede%20Demon.jpg",
+      "location": "Demon Ruins",
+      "description": "This demon is a large bug like creature which defends the path to Lost Izalith. Its arms and tail are separate living centipedes.",
+      "healthPoints": 3432, 
+      "magicRes": 222,
+      "fireRes": 9999,
+      "lightningRes": 274,
+      "physicalRes": 343,
+      "slashRes": 343,
+      "strikeRes": 343,
+      "thrustRes": 343
+    }
+  ]
+}
