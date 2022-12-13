@@ -1,14 +1,12 @@
 package com.example.dsbosses
 
 import android.content.Context
-import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Bundle
 import android.widget.Button
 import android.widget.CheckBox
 import android.widget.EditText
 import android.widget.ImageButton
-import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 
 class LoginActivity : AppCompatActivity() {
@@ -35,8 +33,7 @@ class LoginActivity : AppCompatActivity() {
         }
 
         aboutUsButton.setOnClickListener{
-            val auxIntent = Intent(this, AboutUsActivity::class.java)
-            this.startActivity(auxIntent)
+            Utils.loadActivity(this, AboutUsActivity())
         }
 
         /**
@@ -51,12 +48,10 @@ class LoginActivity : AppCompatActivity() {
                 val passwordString = passwordField.text.toString()
                 if(rememberCheckBox.isChecked) {
                     registerUser(sharedPreferences, userString, passwordString)
-                    val auxIntent = Intent(this, TitlesActivity::class.java)
-                    this.startActivity(auxIntent)
+                    Utils.loadActivity(this, TitlesActivity())
                 }else{
                     if(checkIfUserExists(userString, passwordString, savedUser, savedPassword)) {
-                        val auxIntent = Intent(this, TitlesActivity::class.java)
-                        this.startActivity(auxIntent)
+                        Utils.loadActivity(this, TitlesActivity())
                     }else{
                         alertWrongCredentials()
                     }
@@ -66,23 +61,15 @@ class LoginActivity : AppCompatActivity() {
     }
 
     private fun alertEmptyFields() {
-        val alert = AlertDialog.Builder(this)
-        alert.setTitle("WATCH OUT!")
-        alert.setMessage("Please fill the fields with your user and password")
-        alert.setPositiveButton(
-            "Ok"
-        ) { dialog, which -> }
-        alert.show()
+        val title = "WATCH OUT!"
+        val message = "Please fill the fields with your user and password"
+        Utils.createAlertDialog(this, title, message, "Ok")
     }
 
     private fun alertWrongCredentials() {
-        val alert = AlertDialog.Builder(this)
-        alert.setTitle("WRONG CREDENTIALS!")
-        alert.setMessage("Error login. Incorrect user or password")
-        alert.setPositiveButton(
-            "Ok"
-        ) { dialog, which -> }
-        alert.show()
+        val title = "WRONG CREDENTIALS!"
+        val message = "Error login. Incorrect user or password"
+        Utils.createAlertDialog(this, title, message, "Ok")
     }
 
     private fun registerUser(sharedPreferences: SharedPreferences, newUser: String, newPassword: String) {

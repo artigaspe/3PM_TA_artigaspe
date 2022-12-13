@@ -1,6 +1,5 @@
 package com.example.dsbosses
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -16,20 +15,17 @@ class TitlesActivity : AppCompatActivity() {
         val darksoulsButton: ImageButton = findViewById<ImageButton>(R.id.imgBtnDarkSouls)
 
         backButton.setOnClickListener{
-            val auxIntent = Intent(this, LoginActivity::class.java)
-            this.startActivity(auxIntent)
+            Utils.loadActivity(this, LoginActivity())
         }
 
         demonsButton.setOnClickListener{
-            val auxIntent = Intent(this, BossesListActivity::class.java)
-            auxIntent.putExtra("endpoint", Constants.DEMONS_PATH)
-            this.startActivity(auxIntent)
+            Utils.loadActivityWithExtra(
+                this, BossesListActivity(), "endpoint", Constants.DEMONS_PATH)
         }
 
         darksoulsButton.setOnClickListener{
-            val auxIntent = Intent(this, BossesListActivity::class.java)
-            auxIntent.putExtra("endpoint", Constants.DS1_PATH)
-            this.startActivity(auxIntent)
+            Utils.loadActivityWithExtra(
+                this, BossesListActivity(), "endpoint", Constants.DS1_PATH)
         }
     }
 }

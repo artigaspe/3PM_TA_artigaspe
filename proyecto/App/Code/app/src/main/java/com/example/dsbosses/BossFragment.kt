@@ -34,7 +34,6 @@ class BossFragment : Fragment() {
                     columnCount <= 1 -> LinearLayoutManager(context)
                     else -> GridLayoutManager(context, columnCount)
                 }
-                val bossesNames: MutableList<String> = arrayListOf()
                 getBosses{ bossesList ->
                     adapter = MyBossRecyclerViewAdapter(bossesList, listener)
                 }
@@ -65,12 +64,9 @@ class BossFragment : Fragment() {
         val myActivity: Activity? = activity
         val extra = myActivity?.intent?.extras
         val endPoint: String? = extra?.getString("endpoint")
-        //val url = Constants.API_URL + Constants.DS1_PATH
         val url = Constants.API_URL + endPoint
         val jsonObjectRequest = JsonObjectRequest(
             Request.Method.GET, url, null, { response ->
-                /*val status = response.optInt(Constants.STATUS, Constants.ERROR)
-                if (status == Constants.SUCCESS) {*/
                 val jsonList = response.getJSONArray(Constants.BOSSES_PROPERTY).toString()
                 val mutableListType = object : TypeToken<MutableList<BossEntity>>(){}.type
                 val bossesList = Gson().fromJson<MutableList<BossEntity>>(jsonList, mutableListType)
@@ -80,7 +76,6 @@ class BossFragment : Fragment() {
                 error.printStackTrace()
             }
         )
-
         var requestQueue = Volley.newRequestQueue(myActivity as Context)
         requestQueue.add(jsonObjectRequest)
     }
