@@ -43,10 +43,10 @@ class BossFragment : Fragment() {
 
                 val bossesNames: MutableList<String> = arrayListOf()
                 getBosses{ bossesList ->
-                    for(item in bossesList) {
+                    /*for(item in bossesList) {
                         bossesNames.add(item.name)
-                    }
-                    adapter = MyBossRecyclerViewAdapter(bossesNames, listener)
+                    }*/
+                    adapter = MyBossRecyclerViewAdapter(bossesList, listener)
                 }
             }
         }
@@ -80,7 +80,7 @@ class BossFragment : Fragment() {
      */
     interface OnListFragmentInteractionListener {
         // TODO: Update argument type and name
-        fun onListFragmentInteraction(item: String?)
+        fun onListFragmentInteraction(item: BossEntity?)
     }
 
     fun getBosses(callback: (MutableList<BossEntity>) -> Unit ){

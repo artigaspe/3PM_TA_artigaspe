@@ -8,7 +8,7 @@ import android.widget.TextView
 import kotlinx.android.synthetic.main.fragment_boss.view.*
 
 class MyBossRecyclerViewAdapter(
-    private val mValues: List<String>,
+    private val mValues: List<BossEntity>,
     private val mListener: BossFragment.OnListFragmentInteractionListener?
 ) : RecyclerView.Adapter<MyBossRecyclerViewAdapter.ViewHolder>() {
 
@@ -16,7 +16,7 @@ class MyBossRecyclerViewAdapter(
 
     init {
         mOnClickListener = View.OnClickListener { v ->
-            val item = v.tag as String
+            val item = v.tag as BossEntity
             // Notify the active callbacks interface (the activity, if the fragment is attached to
             // one) that an item has been selected.
             mListener?.onListFragmentInteraction(item)
@@ -31,7 +31,7 @@ class MyBossRecyclerViewAdapter(
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val item = mValues[position]
-        holder.mIdView.text = item
+        holder.mIdView.text = item.name
 
         with(holder.mView) {
             tag = item

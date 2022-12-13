@@ -14,8 +14,8 @@ class BossInfoActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_boss_info)
 
-        val extra = intent.extras
-        val bossSelected: String? = extra?.getString("bossSelected")
+        val extras = intent.extras
+        val bossImageURL: String? = extras?.getString("bossImageURL")
 
         val bossName: TextView = findViewById<TextView>(R.id.txtAPIname)
         val bossLocation: TextView = findViewById<TextView>(R.id.txtAPIlocation)
@@ -29,56 +29,16 @@ class BossInfoActivity : AppCompatActivity() {
         val bossStrikeRes: TextView = findViewById<TextView>(R.id.txtAPIstrikeRes)
         val bossThrustRes: TextView = findViewById<TextView>(R.id.txtAPIthrustRes)
 
-
-
-        this.getBosses { bossesList ->
-            bossName.text = bossesList.first().name
-            bossLocation.text = bossesList.first().location
-            bossDescription.text = bossesList.first().description
-            bossHP.text = bossesList.first().healthPoints.toString()
-            bossMagicRes.text = bossesList.first().magicRes.toString()
-            bossFireRes.text = bossesList.first().fireRes.toString()
-            bossLightningRes.text = bossesList.first().lightningRes.toString()
-            bossPhysiscalRes.text = bossesList.first().physicalRes.toString()
-            bossSlashRes.text = bossesList.first().slashRes.toString()
-            bossStrikeRes.text = bossesList.first().strikeRes.toString()
-            bossThrustRes.text = bossesList.first().thrustRes.toString()
-            /*for(i in bossesList) {
-                if(i.name == bossSelected.toString()){
-                    bossName.text = i.name
-                    bossLocation.text = i.location
-                    bossDescription.text = i.description
-                    bossHP.text = i.healthPoints.toString()
-                    bossMagicRes.text = i.magicRes.toString()
-                    bossFireRes.text = i.fireRes.toString()
-                    bossLightningRes.text = i.lightningRes.toString()
-                    bossPhysiscalRes.text = i.physicalRes.toString()
-                    bossSlashRes.text = i.slashRes.toString()
-                    bossStrikeRes.text = i.strikeRes.toString()
-                    bossThrustRes.text = i.thrustRes.toString()
-                }
-            }*/
-
-        }
-    }
-
-    fun getBosses(callback: (MutableList<BossEntity>) -> Unit ){
-        val url = Constants.API_URL + Constants.DS1_PATH
-        val jsonObjectRequest = JsonObjectRequest(
-            Request.Method.GET, url, null, { response ->
-                /*val status = response.optInt(Constants.STATUS, Constants.ERROR)
-                if (status == Constants.SUCCESS) {*/
-                val jsonList = response.getJSONArray(Constants.BOSSES_PROPERTY).toString()
-                val mutableListType = object : TypeToken<MutableList<BossEntity>>(){}.type
-                val bossesList = Gson().fromJson<MutableList<BossEntity>>(jsonList, mutableListType)
-                callback(bossesList)
-            },
-            { error ->
-                error.printStackTrace()
-            }
-        )
-
-        var requestQueue = Volley.newRequestQueue(this) //(myActivity as Context)
-        requestQueue.add(jsonObjectRequest)
+        bossName.text = extras?.getString("bossName")
+        bossLocation.text = extras?.getString("bossLocation")
+        bossDescription.text = extras?.getString("bossDescription")
+        bossHP.text = extras?.getInt("bossHP").toString()
+        bossMagicRes.text = extras?.getInt("bossMagicRes").toString()
+        bossFireRes.text = extras?.getInt("bossFireRes").toString()
+        bossLightningRes.text = extras?.getInt("bossLightningRes").toString()
+        bossPhysiscalRes.text = extras?.getInt("bossPhysicalRes").toString()
+        bossSlashRes.text = extras?.getInt("bossSlashRes").toString()
+        bossStrikeRes.text = extras?.getInt("bossStrikeRes").toString()
+        bossThrustRes.text = extras?.getInt("bossThrustRes").toString()
     }
 }

@@ -17,7 +17,7 @@ class TitlesActivity : AppCompatActivity() {
         }
 
         darksoulsButton.setOnClickListener{
-            Utils.startNewActivity(this, BossInfoActivity())
+            Utils.startNewActivity(this, BossesListActivity())
         }
     }
 }
