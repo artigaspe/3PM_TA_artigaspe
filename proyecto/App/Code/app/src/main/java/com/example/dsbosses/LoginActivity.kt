@@ -3,10 +3,7 @@ package com.example.dsbosses
 import android.content.Context
 import android.content.SharedPreferences
 import android.os.Bundle
-import android.widget.Button
-import android.widget.CheckBox
-import android.widget.EditText
-import android.widget.ImageButton
+import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 
 class LoginActivity : AppCompatActivity() {
@@ -15,6 +12,9 @@ class LoginActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
+
+        val welcomeText = "Welcome to DSbosses your trusty app for boss info"
+        Toast.makeText(this, welcomeText, Toast.LENGTH_LONG).show()
 
         val userField: EditText = findViewById<EditText>(R.id.edtUser)
         val passwordField: EditText = findViewById<EditText>(R.id.edtPassword)
